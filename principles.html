@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Princípios</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="nav-logo"> <img src="assets/img/small_logo.png" alt="Logo" class="logo"> </a>
+        <nav class="navbar">
+			<a href="index.html">Introdução</a>
+			<a href="scope.html">Escopo</a>
+			<a href="definitions.html">Definições</a>
+			<a href="principles.html">Princípios</a>
+			<a href="rights.html">Direitos</a>
+            <a href="challenges.html">Desafios</a>
+			<a href="about.html">Sobre</a>
+			<a class="link" href="https://xdalle.github.io/5L2FGuide/principles.html">EN</a>
+		</nav>
+    </header>
+
+    <main>
+		<div class="centered-container">
+			<h2 class="select-info" id="select-info">Selecione quais <strong>Princípios</strong> sua organização precisa cumprir.</h2>
+			<h2 class="select-info" id="selected-info" style="display:none;">Você selecionou os seguintes <strong>Princípios</strong> para conformidade:</h2>
+			
+			<div class="circle-container" id="circle-container">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+			<button class="assert-button" id="assert-button">Verificar</button>
+			<button class="play-again-button" id="play-again-button">Jogar Novamente</button>
+		</div>
+        <div id="cards-container">
+        </div>
+		<div id="results" class="results-container"></div>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" /></a>
+            <br /><br />
+            A menos que indicado de outra forma, o conteúdo está licenciado sob
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 &#8211; Internacional</a>.
+            Os autores são responsáveis pela escolha e apresentação de seus textos neste site e pelas opiniões expressas.
+            <a class="link" href="https://github.com/xDalle/5L2FGuide-PT-BR-">Fonte</a>.
+        </p>
+    </footer>
+
+    <script>
+		const assertButton = document.getElementById('assert-button');
+		const selectInfo = document.getElementById('select-info');
+
+		const circleContainer = document.getElementById('circle-container');
+		const circles = circleContainer.getElementsByClassName('circle');
+
+		assertButton.classList.add('disabled');
+		assertButton.disabled = true;
+
+		const principles = [
+			"#1 Finalidade",
+			"#2 Adequação",
+			"#3 Necessidade",
+			"#4 Livre Acesso",
+			"#5 Qualidade dos Dados",
+			"#6 Transparência",
+			"#7 Segurança",
+			"#8 Prevenção",
+			"#9 Não discriminação",
+			"#10 Responsabilização"
+		];
+
+		const subtitles = [
+			"\"realização do tratamento para propósitos legítimos, específicos, explícitos e informados ao titular, sem possibilidade de tratamento posterior de forma incompatível com essas finalidades.\"",
+			"\"compatibilidade do tratamento com as finalidades informadas ao titular, de acordo com o contexto do tratamento.\”",
+			"\"limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos em relação às finalidades do tratamento de dados.\”",
+			"\"garantia, aos titulares, de consulta facilitada e gratuita sobre a forma e a duração do tratamento, bem como sobre a integralidade de seus dados pessoais.\”",
+			"\"garantia, aos titulares, de exatidão, clareza, relevância e atualização dos dados, de acordo com a necessidade e para o cumprimento da finalidade de seu tratamento.\”",
+			"\"garantia, aos titulares, de informações claras, precisas e facilmente acessíveis sobre a realização do tratamento e os respectivos agentes de tratamento, observados os segredos comercial e industrial.\”",
+			"\"utilização de medidas técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão.\”",
+			"\"adoção de medidas para prevenir a ocorrência de danos em virtude do tratamento de dados pessoais.\”",
+			"\"impossibilidade de realização do tratamento para fins discriminatórios ilícitos ou abusivos.\”",
+			"\"demonstração, pelo agente, da adoção de medidas eficazes e capazes de comprovar a observância e o cumprimento das normas de proteção de dados pessoais e, inclusive, da eficácia dessas medidas.\”",
+		];
+
+		const infos = [
+			"• Equivalente à GDPR: <span>&#9989</span> Limitação de Finalidade<br><br>• Equivalente à ADPPA: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Marketing direto / Uso ou divulgação de informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Saber Quais Informações Pessoais Estão Sendo Coletadas. Direito de Acesso às Informações Pessoais (é um Direito Individual!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Limitação de Armazenamento<br><br>• Equivalente à ADPPA: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Uso ou divulgação de informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> mas não declarado explicitamente",
+			"• Equivalente à GDPR: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à ADPPA: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Coleta de informações pessoais solicitadas<br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Excluir / Direito de Optar por Sair (é um Direito Individual!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Direito de Acesso (é um Direito Individual!)<br><br>• Equivalente à ADPPA: <span>&#9989</span> Responsabilidade Executiva (apenas para grandes detentores de dados)<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Acesso às informações pessoais / Notificação da coleta de informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Saber Quais Informações Pessoais Estão Sendo Coletadas. Direito de Acesso às Informações Pessoais (é um Direito Individual!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Precisão<br><br>• Equivalente à ADPPA: <span>&#9989</span> Direito de Correção (é um Direito Individual!)<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Qualidade das informações pessoais / Correção das informações pessoais<br><br>• Equivalente à CCPA: <span>&#10060</span>",
+			"• Equivalente à GDPR: <span>&#9989</span> Licitude, lealdade e transparência<br><br>• Equivalente à ADPPA: <span>&#9989</span> Direito à Transparência (é um Direito Individual!)<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Gestão aberta e transparente de informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Saber Quais Informações Pessoais Estão Sendo Coletadas. Direito de Acesso às Informações Pessoais (é um Direito Individual!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Integridade e confidencialidade<br><br>• Equivalente à ADPPA: <span>&#9989</span> Direito à Segurança dos Dados (é um Direito Individual!)<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Segurança das informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> Procedimentos e práticas de segurança (não é um Princípio!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Restrições (é um Direito Individual!)<br><br>• Equivalente à ADPPA: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à Lei de Privacidade: <span>&#9989</span> Segurança das informações pessoais<br><br>• Equivalente à CCPA: <span>&#9989</span> Procedimentos e práticas de segurança (não é um Princípio!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Restrições (é um Direito Individual!)<br><br>• Equivalente à ADPPA: <span>&#9989</span> Minimização de Dados<br><br>• Equivalente à Lei de Privacidade: <span>&#10060</span><br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Não Retaliação (é um Direito Individual!)",
+			"• Equivalente à GDPR: <span>&#9989</span> Responsabilidade<br><br>• Equivalente à ADPPA: <span>&#9989</span> Responsabilidade Executiva (apenas para grandes detentores de dados)<br><br>• Equivalente à Lei de Privacidade: <span>&#10060</span><br><br>• Equivalente à CCPA: <span>&#9989</span> Direito de Não Retaliação (é um Direito Individual!)"
+		];
+
+		const pbDMessages = [
+			"",
+			"Adequação = Privacidade por Padrão: A configuração padrão de qualquer sistema deve ser amigável à privacidade.",
+			"Necessidade = Proativo, não Reativo; Preventivo, não Corretivo: É necessário adotar medidas proativas para proteger a privacidade, em vez de reativas; Privacidade por Padrão: A configuração, por padrão, de qualquer sistema, deve ser amigável à privacidade; Privacidade Incorporada ao Design: A privacidade deve ser integrada ao design e à arquitetura de sistemas de informação e práticas de negócios.",
+			"Livre Acesso = Visibilidade e Transparência: As organizações devem tornar suas práticas de dados transparentes para os usuários.",
+			"Qualidade dos Dados = Proativo, não Reativo; Preventivo, não Corretivo: É necessário adotar medidas proativas para proteger a privacidade, em vez de reativas.",
+			"Transparência = Visibilidade e Transparência: As organizações devem tornar suas práticas de dados transparentes para os usuários.",
+			"Segurança = Proteção do Ciclo de Vida de Ponta a Ponta: Os dados devem ser protegidos contra acesso não autorizado e violações.",
+			"Prevenção = Proativo, não Reativo; Preventivo, não Corretivo: É necessário adotar medidas proativas para proteger a privacidade, em vez de reativas.",
+			"Não Discriminação = Respeito à Privacidade do Usuário: As organizações devem respeitar e manter a privacidade dos usuários durante todo o ciclo de vida dos dados.",
+			""
+		];
+
+		const isoMessages = [
+			"Finalidade = Consentimento e escolha: Os indivíduos devem ser informados e ter uma escolha genuína em relação à coleta, uso e divulgação de seus dados pessoais.",
+			"Adequação = Limitação de coleta: As organizações devem limitar a coleta de dados pessoais ao que é estritamente necessário para o propósito especificado, evitando a coleta de dados desnecessários.",
+			"Necessidade = Minimização de dados: Os dados pessoais coletados devem ser limitados ao que é necessário para os fins especificados, garantindo que informações excessivas ou irrelevantes não sejam reunidas.",
+			"Livre Acesso = Acesso e participação individual: Os indivíduos devem ter o direito de acessar seus dados pessoais mantidos pelas organizações e poder participar das decisões relacionadas ao seu uso.",
+			"Qualidade dos Dados = Precisão e qualidade: As organizações devem garantir que os dados pessoais sejam precisos, completos e mantidos atualizados. Os dados devem ser mantidos de uma forma que esteja alinhada com o propósito da coleta.",
+			"Transparência = Abertura, transparência e notificação: Os indivíduos devem ter acesso a informações claras sobre como seus dados estão sendo coletados e processados, promovendo a transparência nas práticas de manejo de dados.",
+			"Segurança = Segurança da informação: Medidas de segurança adequadas devem estar em vigor para proteger os dados pessoais contra acesso não autorizado, perda ou violação, garantindo sua confidencialidade e integridade.",
+			"Prevenção = Compliance com a privacidade: As organizações devem cumprir as leis e regulamentos aplicáveis ao processamento de dados pessoais, garantindo que os direitos de privacidade sejam respeitados e mantidos.",
+			"",
+			"Responsabilização = Responsabilização: As organizações são responsáveis por garantir a conformidade com os padrões de privacidade de dados e devem ser capazes de demonstrar responsabilidade em suas atividades de processamento de dados."
+		];
+
+		const pbDPrinciples = [2, 3, 4, 5, 6, 7, 8, 9];
+		const isoPrinciples = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+
+		const combinedPrinciples = [...new Set([...pbDPrinciples, ...isoPrinciples])];
+
+		const cardsContainer = document.getElementById('cards-container');
+		let selectedCards = [];
+
+		function updateButtonState() {
+			if (selectedCards.length > 0) {
+				assertButton.classList.remove('disabled');
+				assertButton.classList.add('enabled');
+				assertButton.disabled = false;
+			} else {
+				assertButton.classList.remove('enabled');
+				assertButton.classList.add('disabled');
+				assertButton.disabled = true;
+			}
+
+			for (let i = 0; i < circles.length; i++) {
+				if (selectedCards.includes(i)) {
+					circles[i].classList.add('filled');
+				} else {
+					circles[i].classList.remove('filled');
+				}
+			}
+		}
+
+		function createCards() {
+			principles.forEach((principle, index) => {
+				const card = document.createElement('div');
+				card.className = 'card';
+				
+				const [title] = principle.split(': ');
+				
+				const cardTitle = document.createElement('div');
+				cardTitle.className = 'card-title';
+				cardTitle.textContent = title;
+
+				const cardSubtitle = document.createElement('div');
+				cardSubtitle.className = 'card-subtitle';
+				cardSubtitle.textContent = subtitles[index];
+
+				const cardText = document.createElement('div');
+				cardText.className = 'card-text';
+				cardText.innerHTML = infos[index];
+
+				card.appendChild(cardTitle);
+				card.appendChild(cardSubtitle);
+				card.appendChild(cardText);
+
+				card.addEventListener('click', () => {
+					card.classList.toggle('selected');
+					if (selectedCards.includes(index)) {
+						selectedCards.splice(selectedCards.indexOf(index), 1);
+					} else {
+						selectedCards.push(index);
+					}
+					updateButtonState();                
+				});
+
+				cardsContainer.appendChild(card);
+			});
+		}
+
+		function displayResults() {
+			const selectedPrinciples = selectedCards.map(index => index + 1);
+			const totalSelected = selectedPrinciples.length;
+
+			const selectedPbDCount = selectedPrinciples.filter(p => pbDPrinciples.includes(p)).length;
+			const selectedISOCount = selectedPrinciples.filter(p => isoPrinciples.includes(p)).length;
+
+			const pbDPercentage = totalSelected > 0 ? ((selectedPbDCount / totalSelected) * 100).toFixed(2) : 0;
+			const isoPercentage = totalSelected > 0 ? ((selectedISOCount / totalSelected) * 100).toFixed(2) : 0;
+
+			const pbDFound = selectedPrinciples.filter(p => pbDPrinciples.includes(p));
+			const pbDNotFound = selectedPrinciples.filter(p => !pbDPrinciples.includes(p));
+			
+			const isoFound = selectedPrinciples.filter(p => isoPrinciples.includes(p));
+			const isoNotFound = selectedPrinciples.filter(p => !isoPrinciples.includes(p));
+			
+			const combinedFound = selectedPrinciples.filter(p => combinedPrinciples.includes(p));
+			
+			const pbDMessagesFound = pbDFound.map(index => pbDMessages[index - 1]);
+			const isoMessagesFound = isoFound.map(index => isoMessages[index - 1]);
+
+			const selectedCombinedCount = selectedPrinciples.filter(p => combinedPrinciples.includes(p)).length;
+			const combinedPercentage = totalSelected > 0 ? ((selectedCombinedCount / totalSelected) * 100).toFixed(2) : 0;
+
+			return { 
+				pbDPercentage, 
+				isoPercentage, 
+				combinedPercentage, 
+				pbDFound, 
+				pbDNotFound, 
+				isoFound, 
+				isoNotFound,
+				combinedFound,
+				pbDMessagesFound,
+				isoMessagesFound
+			};
+		}
+
+		document.getElementById('assert-button').addEventListener('click', () => {
+			if (selectedCards.length > 0) {
+				const resultsDisplay = document.getElementById('results');
+				const selectInfo = document.querySelector('.select-info');
+
+				resultsDisplay.style.visibility = 'visible';
+
+				document.getElementById('select-info').style.display = 'none';
+				document.getElementById('selected-info').style.display = 'block';
+
+				if (resultsDisplay) {
+					resultsDisplay.innerHTML = '';
+				} else {
+					resultsDisplay = document.createElement('div');
+					resultsDisplay.id = 'results';
+					document.body.appendChild(resultsDisplay);
+				}
+
+				cardsContainer.innerHTML = '';
+				selectedCards.sort((a, b) => a - b);
+
+				selectedCards.forEach(index => {
+					const card = document.createElement('div');
+					card.className = 'card selected';
+
+					const title = principles[index];
+					const subtitle = subtitles[index];
+					const content = infos[index];
+					card.innerHTML = `
+						<div class="card-title">${title}</div>
+						<div class="card-subtitle">${subtitle}</div>
+						<div class="card-text">${content}</div>
+					`;
+
+					cardsContainer.appendChild(card);
+				});
+
+				const { 
+					pbDPercentage, 
+					isoPercentage, 
+					combinedPercentage, 
+					pbDFound, 
+					pbDNotFound, 
+					isoFound, 
+					isoNotFound,
+					combinedFound,
+					pbDMessagesFound,
+					isoMessagesFound
+				} = displayResults();
+
+				resultsDisplay.innerHTML = `
+                    <h3>Resultado dos <strong>Princípios</strong> selecionados:</h3>
+                    <div class="principles-list">Privacy by Design: ${pbDPercentage}%</div>
+					<div class="principles-found"><span>&#9989;</span> Princípios identificados (Privacy by Design): <strong>{${pbDFound.join(', ')}}</strong></div>
+                    ${pbDMessagesFound.length > 0 ? `<div class="principles-equivalence"><strong>Equivalência com Privacy by Design:</strong> <br><br> <span>&#9989</span> ${pbDMessagesFound.join('<br> <span>&#9989</span> ')}</div>` : ''}
+					<br>
+                    <div class="principles-list">ISO/IEC 29100: ${isoPercentage}%</div>
+					<div class="principles-found"><span>&#9989;</span> Princípios identificados (ISO/IEC 29100): <strong>{${isoFound.join(', ')}}</strong></div>
+					${isoMessagesFound.length > 0 ? `<div class="principles-equivalence"><strong>Equivalência com ISO/IEC 29100:</strong> <br><br> <span>&#9989</span> ${isoMessagesFound.join('<br> <span>&#9989</span> ')}</div>` : ''}
+					<br>
+					<div class="principles-list">Frameworks combinados: ${combinedPercentage}%</div>
+					<div class="principles-found"><span>&#9989;</span> Princípios identificados (Combinados): <strong>{${combinedFound.join(', ')}}</strong></div>
+                `;
+
+				document.getElementById('selected-info').style.display = 'block';
+				document.getElementById('select-info').style.display = 'none';
+
+				document.getElementById('play-again-button').style.display = 'inline-block';
+				document.getElementById('assert-button').style.display = 'none';
+
+			}		
+		});
+
+		document.getElementById('play-again-button').addEventListener('click', () => {
+			cardsContainer.innerHTML = '';
+			selectedCards = [];
+			
+			document.getElementById('assert-button').style.display = 'inline-block';
+			document.getElementById('play-again-button').style.display = 'none';
+
+			const resultsDisplay = document.getElementById('results');
+			resultsDisplay.innerHTML = '';
+			resultsDisplay.style.visibility = 'hidden';
+
+			document.getElementById('select-info').style.display = 'block';
+			document.getElementById('selected-info').style.display = 'none';
+
+			const selectInfo = document.querySelector('.select-info');
+			selectInfo.style.visibility = 'visible';
+
+			createCards();
+			updateButtonState();
+		});
+
+		createCards();
+		updateButtonState();
+	</script>
+</body>
+</html>

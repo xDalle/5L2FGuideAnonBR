@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Conformidade com a Privacidade</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="nav-logo"> <img src="assets/img/small_logo.png" alt="Logo" class="logo"> </a>
+        <nav class="navbar">
+			<a href="index.html">Introdução</a>
+			<a href="scope.html">Escopo</a>
+			<a href="definitions.html">Definições</a>
+			<a href="principles.html">Princípios</a>
+			<a href="rights.html">Direitos</a>
+            <a href="challenges.html">Desafios</a>
+			<a href="about.html">Sobre</a>
+			<a class="link" href="https://xdalle.github.io/5L2FGuide/challenges.html">EN</a>
+		</nav>
+    </header>
+
+	<main>
+		<div class="carousel">
+			<a href="about.html" class="nav-logo"> <img src="assets/img/logo.png" alt="Logo Maior" class="large-logo"> </a>
+			<div class="scope-text">
+				<h2 class="scope-overview"><strong>Visão Geral dos Desafios</strong></h2>
+				<p>Esta seção aborda os principais <strong>desafios</strong> enfrentados pelas organizações para garantir a conformidade com as leis de proteção de dados e as <strong>soluções</strong> correspondentes que podem ser implementadas para lidar com essas dificuldades. Cada desafio apresenta obstáculos únicos que podem impactar o desenvolvimento e a implantação de aplicativos de software, embora muitos desses problemas compartilhem temas subjacentes comuns. Os principais <strong>desafios</strong> discutidos incluem restrições orçamentárias, ambiguidade nos requisitos legais e a necessidade de estruturas eficazes para incorporar a privacidade desde a concepção. Além disso, as <strong>soluções</strong> propostas visam aprimorar as práticas organizacionais, melhorar as estratégias de conformidade e promover uma cultura de proteção de dados. Ao compreender esses <strong>desafios</strong> e explorar <strong>soluções</strong> práticas, as organizações podem alinhar melhor seus processos aos requisitos legais, garantindo ao mesmo tempo a proteção dos dados pessoais.</p>
+			</div>
+		</div>
+        <section class="scope">
+			<ol>
+				<li class="scope-title"><strong>Escassez de conhecimento da lei</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Esse foi o principal desafio identificado na Revisão Sistemática da Literatura (RSL), envolvendo tanto a falta de consciência sobre a necessidade de implementar a privacidade em software quanto o conhecimento limitado da legislação existente. Embora os desenvolvedores possam ter experiência prática em privacidade, eles enfrentam dificuldades para interpretar os requisitos legais devido à formação formal insuficiente sobre privacidade e a LGPD.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">As organizações adotaram programas de treinamento especializados e educação contínua para suas equipes de desenvolvimento, que são cruciais para garantir a conformidade com a lei e construir uma cultura de privacidade. Uma solução-chave é estabelecer uma política de governança robusta que inclua treinamento regular para todos os funcionários &#8212; especialmente os novos contratados &#8212; sobre práticas adequadas de manuseio de dados e obrigações da LGPD.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Falta equipe com expertise</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Ao contrário do desafio do conhecimento legal limitado, essa questão surge da necessidade de pessoal administrativo adicional e de Oficiais de Proteção de Dados (DPOs) especializados. Sem uma equipe informada, as avaliações de risco para proteção de dados podem ser ineficazes, e a conformidade com a LGPD brasileira pode ser incompleta.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Uma solução simples é nomear um DPO ou contratar consultores especializados ou equipes jurídicas para validação de conformidade. No entanto, os desenvolvedores também sugeriram treinamento contínuo e conscientização para o pessoal existente que lida com dados, a fim de abordar lacunas de expertise. Outra sugestão inovadora envolve o uso de Processamento de Linguagem Natural para detectar automaticamente dados sensíveis durante o processamento, alertando as partes responsáveis sobre possíveis problemas de conformidade sem exigir conhecimento legal prévio.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Traduzir lei para contexto técnico</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Os desenvolvedores enfrentam desafios ao interpretar normas teóricas de privacidade que carecem de técnicas específicas de conformidade. Essa complexidade dificulta a tradução dos requisitos legais em práticas organizacionais, deixando muitos desenvolvedores desconfortáveis. Eles também têm dificuldades com a anonimização de dados e processos de automação. Estruturas como Privacy by Design e Privacidade por Padrão são recomendadas.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Os desenvolvedores sugeriram usar uma Política de Classificação de Informação para catalogação e rotulagem de dados, com ferramentas de código aberto como Openmetadata e Datahub para assistência. É essencial estabelecer estratégias de proteção, incluindo medidas criptográficas e descarte de dados, conforme exigido pela LGPD.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Incerteza dos processos organizacionais</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Os desenvolvedores podem não estar sempre familiarizados com todos os processos organizacionais, complicando a conformidade com a legislação de proteção de dados. Isso leva a desafios na adequação do backup de dados, sistemas de auditoria e uso de serviços em nuvem, que dependem da localização física do armazenamento de dados.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">As organizações devem implementar logs de acesso para o processamento de dados e escolher provedores de nuvem que garantam conformidade com as leis relevantes. Estabelecer uma governança de dados forte com controles de acesso claros é crucial. Centralizar os dados em um único aplicativo, em vez de usar sistemas departamentais, e manter registros detalhados das operações de manuseio de dados pode reduzir a incerteza. Além disso, minimizar a coleta e retenção de dados ajuda os desenvolvedores a entender como e quais dados são utilizados no sistema.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Falta de padronização de técnicas/ferramentas</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Há uma falta de padronização e métricas de avaliação para práticas de privacidade, uma vez que o conceito de privacidade é volátil e varia de projeto para projeto. Embora existam taxonomias e estruturas para implementar a privacidade, não há consenso sobre elas, e a legislação existente carece de diretrizes específicas sobre quais tecnologias utilizar. Consequentemente, as organizações precisam encontrar soluções personalizadas para conformidade. Esse desafio é agravado pela ausência de técnicas, ferramentas ou metodologias padronizadas para garantir a conformidade legal.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Soluções possíveis incluem aderir às diretrizes da plataforma de publicação do aplicativo e utilizar várias tecnologias, como controle de acesso, criptografia SHA256, anonimização, VPNs privadas e gerenciamento de consentimento transparente. A comunicação regular entre os membros da equipe, semelhante às metodologias ágeis como Scrum, é crucial para manter todos informados sobre as tecnologias recomendadas e suas especificidades.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Estrutura organizacional</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Há frequentemente uma lacuna de comunicação entre especialistas em privacidade e desenvolvedores de software, o que dificulta a implementação adequada da privacidade em aplicações devido à ausência de códigos de conduta necessários. As organizações podem impor limitações aos funcionários, resultando em não conformidade regulatória. Uma gestão do conhecimento eficaz é crucial para a organização interna e a conformidade com a legislação.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Projetos de comunicação estratégica, como planos de sistemas de informação ou Programas Institucionais de Privacidade de Dados, podem ajudar a melhorar a cultura organizacional. Além disso, uma governança adequada e acesso limitado a dados sensíveis são importantes. Implementar segurança em nível de linha (RLS) pode ajudar a determinar quais informações compartilhar, e arquiteturas como a Arquitetura de Medalhão da Microsoft podem facilitar a fricção entre desenvolvedores e especialistas em privacidade. Além disso, usar dados fictícios e restringir o acesso a bancos de dados de produção pode garantir conformidade com a LGPD, mesmo entre filiais.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Priorização de requisitos funcionais</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Os desenvolvedores enfrentam desafios na priorização de requisitos funcionais, muitas vezes devido a fatores como redução de desempenho do sistema, prazos apertados para implementação eficaz de segurança e as dificuldades inerentes aos requisitos não funcionais. Existe uma tensão entre priorizar requisitos funcionais e garantir segurança e privacidade, complicando a conformidade com a legislação de privacidade.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Para lidar com a pressão de prazos, testes automatizados podem aumentar o foco em requisitos não funcionais, enquanto métodos que facilitam atualizações rápidas do aplicativo e feedback eficaz podem motivar os desenvolvedores a melhorar ambas as categorias. Muitos desenvolvedores enfatizam a consideração dos requisitos de privacidade desde o início do projeto, utilizando técnicas como a estrutura Privacy by Design, criando componentes arquiteturais reutilizáveis, implementando práticas de baixo custo como criptografia SHA256, usando ferramentas de populacão de banco de dados de teste e mapeando continuamente dados pessoais. Essa abordagem garante que a privacidade seja mantida ao longo do desenvolvimento.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Dificuldades em serviços de terceiros</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Muitos problemas de privacidade surgem do uso de Kits de Desenvolvimento de Software (SDKs) de terceiros. Embora um aplicativo possa inicialmente estar em conformidade com a legislação de privacidade, a incorporação de SDKs não garante a conformidade contínua, uma vez que muitas empresas não conseguem analisar adequadamente esses contratos. Os desenvolvedores enfrentam dificuldades em navegar pelas implicações de privacidade dessas bibliotecas e entender como elas lidam com dados pessoais.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Priorizar bibliotecas de provedores respeitáveis e minimizar o compartilhamento de dados com terceiros para apenas o que é absolutamente necessário. É crucial garantir que todos os fornecedores e parceiros estejam em conformidade com as regulamentações de proteção de dados e evitar a transmissão de informações sensíveis que não sejam essenciais para o processamento. Além disso, o mapeamento detalhado de software e dados &#8212; incluindo documentação, informações do sistema e códigos de terceiros &#8212; é vital para que os desenvolvedores entendam o uso e o armazenamento de dados. Medidas de segurança de dados, como criptografia durante armazenamento, transmissão e uso, também são essenciais para mitigar riscos associados ao compartilhamento de informações. Por último, estabelecer protocolos internos para verificar a integridade e a confiabilidade de bibliotecas e softwares de terceiros pode ajudar a prevenir violações.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Falta política de segurança/privacidade</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">A criação de um formulário de consentimento e uma política de segurança continua sendo um desafio muitas vezes negligenciado pelas organizações. Muitas empresas carecem de medidas de segurança documentadas e não possuem procedimentos para notificar autoridades em caso de violações de dados pessoais. Esse problema pode decorrer dos desenvolvedores também, especialmente quando utilizam bibliotecas de terceiros, o que pode dificultar seu entendimento sobre as aplicações e impedir o desenvolvimento adequado de uma política de privacidade.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Elaborar de forma transparente os termos de uso, revisar bases legais para criar uma política de segurança eficaz e atualizada e empregar técnicas como Rastreamento de Terceiros e Configurações de API. Os desenvolvedores destacaram três pontos-chave para garantir a segurança dos dados: criptografia de banco de dados, anonimização quando necessário (e evitar dados sensíveis sempre que possível) e controle de acesso com gerenciamento de permissões. Com o mapeamento detalhado dos dados coletados, as organizações podem revisar políticas internas e avaliar riscos e respostas a incidentes para garantir que sua política de segurança seja robusta e esteja em conformidade com a LGPD.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Identificação de requisitos de privacidade</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Os desenvolvedores possuem conhecimento empírico sobre privacidade, mas identificar requisitos de privacidade em relação à legislação de proteção de dados é complexo. Uma avaliação ineficaz desses requisitos leva a problemas tanto na coleta de dados &#8212; selecionando dados desnecessários para o software, o que viola o princípio da necessidade &#8212; quanto no desenvolvimento, resultando em falhas de segurança que podem acarretar penalidades administrativas.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">É necessário utilizar ferramentas como especificações de histórias de usuários para facilitar a fase de análise de requisitos. Em equipes ágeis, empregar ferramentas de Design Thinking durante a fase de elicitação de requisitos também pode ser benéfico. O mapeamento do ciclo de vida dos dados (Inventário de Dados) ajuda a identificar e documentar todos os dados pessoais e seus fluxos, permitindo uma análise mais profunda do que é essencial para os propósitos do software e o que pode ser descartado. Além disso, a equipe de conformidade desempenha um papel crucial na mitigação desse desafio, particularmente quando os desenvolvedores enfrentam dificuldades com os aspectos teóricos da lei.</li>
+					</ul>
+				</li>
+				<li class="scope-title"><strong>Ambiguidade da lei</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Muitos desenvolvedores têm dificuldades em cumprir regulamentações quando são vagas, complicando a extração e a implementação de requisitos legais. Quando os requisitos não são expressos em uma linguagem clara e específica, podem ser interpretados de várias maneiras, levando a um nível de privacidade que pode não estar alinhado com a intenção legislativa.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Mapear leis de privacidade para estruturas de privacidade desde o início e utilizar padrões de design como chaves de criptografia gerenciadas pelo usuário e adição de ruído para ofuscação de dados. Uma solução prática imediata é empregar uma estratégia de prevenção para qualquer conjunto de dados, enfatizando a minimização de dados &#8212; coletando apenas os dados necessários para atingir os objetivos de tratamento &#8212; e mascarando e criptografando todos os dados como métodos eficazes para mitigar danos em caso de violação.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Escassez de guias/ferramentas</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">A ambiguidade na legislação de privacidade e os desafios em traduzir essas leis para um contexto técnico destacam a necessidade de guias e ferramentas para auxiliar na conformidade. No entanto, desenvolvedores no Brasil e na Europa relataram a falta de diretrizes específicas para aplicar a privacidade em contextos de software. Muitos desenvolvedores têm dificuldade em encontrar diretrizes de design apropriadas, e quando as encontram, o suporte é muitas vezes inadequado para empresas menores.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Focar na experiência do usuário e consultar profissionais na ausência de recursos dedicados. Além disso, auditorias especializadas, interações com Oficiais de Proteção de Dados (DPOs) e acesso a materiais informativos sobre a LGPD (Lei Geral de Proteção de Dados) são cruciais para compensar a falta de diretrizes direcionadas. Os desenvolvedores expressaram que ter fácil acesso a recursos informativos sobre a LGPD, incluindo normas e técnicas, é benéfico para toda a equipe. Eles também sugeriram que tutoriais em vídeo e folhetos forneceriam suporte significativo, facilitando o acesso à informação, especialmente porque as questões relacionadas à LGPD são tratadas principalmente pelas equipes de conformidade, e não pela equipe de desenvolvimento.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Processamento de dados internacionais</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Este foi um desafio importante identificado na Revisão Sistemática da Literatura (SLR), envolvendo tanto a falta de conscientização sobre a necessidade de implementar a privacidade no software quanto o conhecimento limitado da legislação existente. Embora os desenvolvedores possam ter experiência prática em privacidade, eles enfrentam dificuldades para interpretar os requisitos legais devido à falta de treinamento formal sobre privacidade e a LGPD.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">As organizações adotaram programas de treinamento especializados e educação contínua para suas equipes de desenvolvimento, que são cruciais para garantir a conformidade com a lei e construir uma cultura de privacidade. Uma solução chave é estabelecer uma política de governança robusta que inclua treinamento regular para todos os funcionários &#8212; especialmente os novos contratados &#8212; sobre práticas adequadas de manuseio de dados e obrigações da LGPD.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Mudanças nos estágios de desenvolvimento</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Alterações durante o processo de desenvolvimento do produto são comuns, variando desde crescimento da infraestrutura e expansão de dados até ajustes voltados para melhorar a compatibilidade. Embora essas mudanças possam ser necessárias, elas aumentam a complexidade técnica e requerem revisões das técnicas que implementam a privacidade no software. Equilibrar a conformidade com a GDPR em um ambiente competitivo de negócios de dados é um desafio notado.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Uma solução proposta é o uso de engenharia de software contínua, que permite atualizações rápidas e feedback, possibilitando correções rápidas de problemas de não conformidade identificados por meio do feedback. Portanto, quaisquer modificações no software necessitam de monitoramento adequado das leis aplicáveis e avaliações de impacto regulares. Essas avaliações permitem ajustes contínuos à medida que o software evolui. Além disso, alguns desenvolvedores indicaram que a contratação de consultores legais especializados poderia ajudar na detecção de não conformidade súbita.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Restrições de orçamento</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Esta é uma barreira comum que afeta principalmente as organizações, com os desenvolvedores tendo pouca ou nenhuma influência sobre ela. Aproximadamente um ano após a entrada em vigor da GDPR, estudos mostraram que a conformidade com a lei é custosa e demorada, exigindo recursos financeiros e humanos contínuos que as organizações frequentemente têm em quantidade limitada. Existe uma associação direta entre operações de segurança e um aumento nos orçamentos organizacionais; assim, o nível de privacidade e segurança de dados está intimamente ligado ao capital disponível. Esse desafio é particularmente crítico para pequenas e médias empresas.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Uma solução proposta é adotar um design de privacidade proativo, contrastando com soluções que vinculam as normas da GDPR a requisitos comerciais. Alguns desenvolvedores sugeriram utilizar ferramentas de código aberto, especialmente aquelas que são populares e robustas em ambientes profissionais. Essa abordagem permite que as organizações abordem problemas imediatos relacionados à conformidade com a LGPD, mesmo que atualmente não possam alocar capital significativo para essa área.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Trade-off ética vs. economia</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">As organizações frequentemente enfrentam o desafio de equilibrar o respeito pela privacidade com a priorização da liberdade corporativa. Uma vez que o principal objetivo de uma empresa é econômico, a privacidade e a proteção de dados pessoais podem ser despriorizadas, mesmo na presença de leis de conformidade.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">As organizações precisam considerar as possíveis penalidades administrativas por não conformidade, bem como a desvantagem competitiva a longo prazo e a perda de confiança do cliente que podem levar a perdas financeiras. É crucial apresentar claramente o uso pretendido dos dados em termos de consentimento e desvincular os indivíduos de seus dados sempre que possível, por meio da anonimização. Por fim, os indivíduos devem ter o direito de acessar, modificar e excluir permanentemente suas informações mediante solicitação.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Impacto na usabilidade da aplicação</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Esse problema é particularmente relevante para pequenas e médias empresas. Se as capacidades de processamento de dados forem insuficientes, a implementação de estruturas de privacidade e proteção de dados pode diminuir o desempenho do sistema ou prejudicar a usabilidade da aplicação.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">É aconselhável empregar estruturas específicas o mais cedo possível, durante o processo de design da aplicação, para estimar e mitigar riscos de desempenho. Uma técnica chave de mitigação é a minimização de dados, que melhora a transparência dos termos de consentimento e reduz os potenciais impactos negativos na experiência do usuário. Consequentemente, organizar, processar e limpar dados torna-se mais fácil, uma vez que as informações armazenadas estão alinhadas com o princípio da necessidade delineado nas regulamentações de privacidade.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Relacionamento com o usuário</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">As regulamentações de privacidade atuais concedem aos usuários vários direitos &#8212; como portabilidade de dados, correção e exclusão &#8212; que influenciam ativamente como seus dados pessoais são processados. Estudos identificaram desafios na relação entre usuários e organizações ou desenvolvedores, particularmente em relação ao processo de consentimento, uma vez que alguns usuários podem ser indiferentes aos benefícios da privacidade. Os desenvolvedores também têm dificuldades para implementar a transparência por meio de políticas de privacidade e sistemas de solicitação, complicando ainda mais a situação.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Empresas líderes como Microsoft e Google abordaram essas questões fornecendo ferramentas de autoatendimento e painéis de privacidade. Além disso, é benéfico envolver os usuários durante todo o processo de processamento de dados, garantindo que eles estejam cientes e consintam com todo o processo, especialmente em testes de usabilidade que exigem gravação.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Processo de desenvolvimento não avaliado institucionalmente à luz da LGPD</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">É comum que as organizações não tenham uma cultura voltada para a conformidade com a LGPD. Um dos principais desafios é a necessidade de modificar a arquitetura de software que já está em produção e que não foi projetada com os requisitos da LGPD em mente.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">É recomendado utilizar estruturas estabelecidas ou criar um novo padrão que garanta a implementação da LGPD desde o início de cada projeto. Além disso, guias para mapear os requisitos da LGPD são sugeridos para alinhar esses requisitos com soluções dentro do processo de desenvolvimento.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Projetos criados sem privacidade por padrão</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Esse problema é semelhante aos desafios associados a mudanças nas etapas de desenvolvimento, mas se relaciona especificamente à falta de consideração pela privacidade durante a fase inicial. Falhas que violam a LGPD são frequentemente identificadas no início do desenvolvimento e podem ser facilmente corrigidas; no entanto, a prevenção é sempre preferível.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">É recomendado definir as configurações de privacidade mais restritivas como padrões, não exigindo intervenção do usuário. Um desenvolvedor sugeriu usar a estrutura de Privacy by Design, uma vez que a privacidade por padrão é um de seus princípios fundamentais. Integrar a privacidade desde o início do desenvolvimento ajuda a garantir que ela seja um princípio central do projeto, prevenindo penalidades indesejadas e reduzindo a necessidade de retrabalho.</li>
+					</ul>
+				</li>
+                <li class="scope-title"><strong>Constantes mudanças da lei</strong>
+					<ul class="item-group">
+						<li class="item-title"><strong>Descrição:</strong></li>
+						<li class="item-title2">Dada a exigência de conformidade com várias regulamentações complexas, o mapeamento e o acesso aos dados coletados devem ser ainda mais rigorosos, e a documentação do software deve incluir todas as mudanças, mesmo as recentes.</li>
+						<li class="item-title"><strong>Soluções:</strong></li>
+						<li class="item-title2">Recomenda-se que a organização tenha um Plano de Resposta a Incidentes (PRI) eficaz em vigor para minimizar possíveis danos de quaisquer mudanças legislativas que ainda não tenham sido implementadas no software. Além disso, é crucial que o software seja continuamente atualizado, com documentação de projeto atualizada, potencialmente vinculada a um processo de controle de versão.</li>
+					</ul>
+				</li>
+			</ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" /></a>
+            <br /><br />
+            A menos que indicado de outra forma, o conteúdo está licenciado sob
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 &#8211; Internacional</a>.
+            Os autores são responsáveis pela escolha e apresentação de seus textos neste site e pelas opiniões expressas.
+            <a class="link" href="https://github.com/xDalle/5L2FGuide-PT-BR-">Fonte</a>.
+        </p>
+    </footer>

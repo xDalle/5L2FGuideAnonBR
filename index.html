@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Conformidade com a Privacidade</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="nav-logo"> <img src="assets/img/small_logo.png" alt="Logo" class="logo"> </a>
+        <nav class="navbar">
+			<a href="index.html">Introdução</a>
+			<a href="scope.html">Escopo</a>
+			<a href="definitions.html">Definições</a>
+			<a href="principles.html">Princípios</a>
+			<a href="rights.html">Direitos</a>
+            <a href="challenges.html">Desafios</a>
+			<a href="about.html">Sobre</a>
+			<a class="link" href="https://xdalle.github.io/5L2FGuide/index.html">EN</a>
+		</nav>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="carousel-content">
+                <button id="prev" class="carousel-button">❮</button>
+                <div class="carousel-text" id="carousel-text"></div>
+                <button id="next" class="carousel-button">❯</button>
+             </div>
+        </div>
+
+        <section class="introduction">
+            <h2 class="intro-title" id="introduction">Introdução</h2>
+            <p class="intro-paragraph">
+                <p>O objetivo deste guia é proporcionar percepções sobre como as organizações devem avaliar sua respectiva <span title='Aderência a leis, regulamentos e diretrizes relevantes para a proteção de dados e privacidade.'><span class='highlight'>conformidade</span></span> com alguns <span title='Regulamentos ou estruturas que estabelecem requisitos para a proteção de dados pessoais.'><span class='highlight'>padrões de proteção de dados</span></span> notáveis, como ISO/IEC 29100 e o conceito de Privacy by Design, incluindo as melhores práticas da literatura e da indústria.</p>
+                <p>Compreender como equipes ou organizações enfrentam a conformidade pode servir como uma ferramenta prática muito básica, que assume uma integração unificada entre frameworks que favorecem a criação de um conjunto de diretrizes de privacidade mais uniforme, apoiando diretamente a conformidade com as leis de privacidade.</p>
+                <p>No entanto, as organizações frequentemente encontram desafios significativos para alcançar essa conformidade. Obstáculos comuns, como restrições orçamentárias e ambiguidade nos requisitos legais, podem dificultar o progresso e complicar a implementação de frameworks de privacidade eficazes. Este guia visa não apenas delinear as melhores práticas, mas também abordar esses desafios de frente, fornecendo às organizações estratégias práticas para aprimorar seus esforços de conformidade.</p>
+                <p>O guia é dividido em seções como <strong>Escopo</strong> e <strong>Definições</strong>, e fornece uma explicação detalhada dos termos-chave de privacidade e das variedades de cobertura da legislação de privacidade. Além disso, as seções de <strong>Princípios</strong> e <strong>Direitos</strong> mergulham em comandos específicos presentes nas leis de proteção de dados pessoais, como suas descrições (com base na LGPD), sua equivalência em outras leis e avaliam o quão bem os frameworks ISO/IEC 29100 e Privacy by Design são capazes de atender a esses <span title='Condições ou eventos específicos que exigem conformidade com as leis de privacidade.'><span class='highlight'>gatilhos legais</span></span>.</p>
+                <p>Além disso, o usuário recebe as informações relevantes na versão interativa da seção de <strong>Princípios</strong> e <strong>Direitos</strong> por meio de um jogo em que cartas simbolizando diferentes diretrizes são selecionadas. À medida que cada diretriz é selecionada, os resultados orientam sobre o quão bem os frameworks específicos satisfazem os requisitos legais, com base em sua cobertura percentual.</p>
+                <p>Esse jogo é estruturado de modo que os usuários possam comparar qual framework se adequa melhor entre ISO/IEC 29100, Privacy by Design ou ambos para atender aos objetivos de conformidade. Com a seleção de cartas limitada apenas às mais pertinentes, as equipes podem direcionar suas abordagens em direção à privacidade, garantindo a conformidade com estipulações organizacionais específicas. Isso torna o usuário praticamente consciente de como conectar os padrões e prestar atenção em como a conformidade com diretrizes de privacidade é organizada e executada. Há também um exemplo em execução na seção <strong>Sobre</strong>.</p>
+                <p>Ao reconhecer e enfrentar os desafios multifacetados que as organizações enfrentam na conformidade com a proteção de dados pessoais, este guia serve como um recurso abrangente para equipes de desenvolvimento que buscam navegar nas complexidades das regulamentações de privacidade de forma eficaz. Por fim, ao referenciar padrões bem conhecidos e incorporar um toque de interesse humano, acreditamos que o documento fornece um veículo sólido para que grupos de desenvolvimento compreendam o tema da privacidade de dados e da regulamentação no contexto das práticas empresariais.</p>
+                <p>Este guia visa apoiar organizações de <strong>vários</strong> tamanhos na navegação pelas regulamentações de privacidade de dados, fornecendo práticas essenciais sem se aprofundar em detalhes técnicos extensos ou nuances específicas do setor.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" /></a>
+            <br /><br />
+            A menos que indicado de outra forma, o conteúdo está licenciado sob
+            <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 &#8211; Internacional</a>.
+            Os autores são responsáveis pela escolha e apresentação de seus textos neste site e pelas opiniões expressas.
+            <a class="link" href="https://github.com/xDalle/5L2FGuide-PT-BR-">Fonte</a>.
+        </p>
+    </footer>
+
+    <script>
+        const texts = [
+            "<strong>Lei Geral de Proteção de Dados (LGPD)</strong><br><br>A regulamentação brasileira que elucida o dever de tratamento adequado de dados pessoais pelos <span title='Entidades que determinam as finalidades e os meios de processamento de dados pessoais.'><span class='highlight'>controladores</span></span>, dadas as condições. Em vigor desde agosto de 2020, a lei busca garantir, dentro de seu <span title='Área geográfica dentro da qual a lei é aplicável.'><span class='highlight'>escopo territorial</span></span> de aplicação, a integridade da privacidade dos dados de toda a população brasileira, mesmo que o processamento não ocorra em território nacional, desde que ocorra a coleta. Vale destacar que, baseada na GDPR europeia, a lei foi estabelecida para prevenir novos <span title='Incidentes onde ocorre acesso ou divulgação não autorizada de dados pessoais, levando a possíveis danos aos indivíduos.'><span class='highlight'>vazamentos de dados</span></span>, considerando que leis brasileiras anteriores relacionadas ao <span title='Qualquer operação ou conjunto de operações realizadas com dados pessoais, como coleta, armazenamento, alteração ou compartilhamento.'><span class='highlight'>processamento de dados</span></span> não conseguiram garantir plenamente a <span title='Medidas legais e princípios que protegem as informações pessoais dos indivíduos contra uso indevido ou acesso não autorizado.'><span class='highlight'>proteção de dados pessoais</span></span>, inclusive na área de desenvolvimento de software.",
+            "<strong>Regulamento Geral sobre a Proteção de Dados (GDPR)</strong><br><br>A GDPR surge da necessidade de prevenir a crescente violação de <span title='Informação que se relaciona com um indivíduo identificado ou identificável, central para as leis de proteção de dados.'><span class='highlight'>dados pessoais</span></span> na era digital, dada a mudança abrupta no contexto de privacidade. Em vigor desde maio de 2018, o regulamento estabelece uma série de regras voltadas à proteção dos dados dos cidadãos residentes na União Europeia (UE) para evitar esses vazamentos de dados. Além disso, a GDPR não se limita ao processamento de dados dentro do território da UE, aplicando-se a qualquer atividade relacionada a dados pessoais, desde que pertençam a residentes, independentemente do país de origem onde são processados, com a aplicação de <span title='Penalidades ou ações de fiscalização contra indivíduos ou organizações por violação de leis ou regulamentos.'><span class='highlight'>sanções administrativas</span></span> em caso de violações.",
+            "<strong>Lei Americana de Proteção à Privacidade de Dados (ADPPA)</strong><br><br>Em relação aos Estados Unidos da América (EUA), a embrionária ADPPA foi introduzida em julho de 2022 como o primeiro projeto abrangente de privacidade de dados do país. Antes da ADPPA, cada estado tinha autonomia para designar <span title='Sistemas ou diretrizes estabelecidos por estados para gestão de privacidade de dados.'><span class='highlight'>frameworks</span></span> de privacidade a serem seguidos e legislações estaduais, como a lei de privacidade de dados da Califórnia, ou seja, a renomada CCPA. Uma diferença significativa em relação às leis brasileiras e europeias é que as leis americanas colocam maior ênfase na <span title='Princípio de que empresas têm o direito de operar com mínima regulamentação, frequentemente priorizando interesses empresariais.'><span class='highlight'>liberdade corporativa</span></span>, o que significa que há um foco maior nos interesses empresariais do que nos <span title='Os direitos dos indivíduos em relação aos seus dados pessoais e privacidade.'><span class='highlight'>direitos individuais</span></span>.",
+            "<strong>Lei de Privacidade Australiana</strong><br><br>Mais antiga que muitas, a Lei de Privacidade da Austrália &#8212; 1988 &#8212; imposta agora com inúmeras <span title='Alterações ou adições feitas à lei ao longo do tempo, refletindo necessidades de privacidade e avanços tecnológicos.'><span class='highlight'>emendas</span></span> desde sua criação, torna a interpretação e implementação um tanto complicadas em um cenário técnico contemporâneo. A lei foi escrita numa época em que quase nenhuma trégua era concedida às crescentes preocupações com a privacidade frente à <span title='Processo de conversão de informações em formato digital.'><span class='highlight'>digitalização</span></span>, requerendo, assim, sua constante modernização até os dias de hoje por meio de atualizações e emendas. As emendas são mais de uma centena e, ao longo das décadas, encontraram seu caminho em diversas atualizações legislativas, tornando a análise da lei uma tarefa árdua que exige análise cuidadosa.",
+            "<strong>Lei de Privacidade do Consumidor da Califórnia (CCPA)</strong><br><br>Como mencionado anteriormente, a CCPA é uma lei de proteção de dados que antecede a ADPPA, abrangendo apenas o estado da Califórnia. Embora também tenha um foco similar na liberdade corporativa &#8212; como seu sucessor &#8212; ainda possui um <span title='Limites e aplicabilidade específicos da lei.'><span class='highlight'>escopo limitado</span></span>, aplicando-se apenas a organizações específicas na Califórnia. É importante estar familiarizado com ele, pois, assim como a ADPPA, não possui uma <span title='Parte clara e definida da lei que delineia princípios orientadores.'><span class='highlight'>seção explícita sobre princípios</span></span> e pode ajudar a entender melhor o escopo e os <span title='Regras ou diretrizes subjacentes que não são explicitamente declaradas, mas podem ser inferidas do texto da lei.'><span class='highlight'>princípios implícitos</span></span>.",
+            "<strong>Privacy by Design (PbD)</strong><br><br>Proposto por Ann Cavoukian em 2009, destaca-se pelo fato de que todos os <span title='Regras ou diretrizes fundamentais que regem práticas de privacidade e proteção de dados.'><span class='highlight'>princípios</span></span> das legislações existentes &#8212; discutidos globalmente &#8212; estão correlacionados aos princípios do próprio PbD. Assim, ele é baseado em sete princípios fundamentais, que são usados globalmente e facilitam a aplicação de privacidade e proteção de dados, especialmente durante o <span title='Processo de definição da arquitetura, componentes, interfaces e outras características de software.'><span class='highlight'>design de software</span></span>. Dessa forma, esses esquemas PbD são frequentemente utilizados em conjunto com legislações locais e, além disso, algumas leis incluem explicitamente PbD em seus artigos, como a GDPR. Isso significa que, em certas legislações, PbD é legalmente necessário para alcançar a conformidade e, consequentemente, a privacidade de dados pessoais.",
+            "<strong>ISO/IEC 29100</strong><br><br>Em 2011, a <span title='Organização Internacional de Normalização (ISO) e a Comissão Eletrotécnica Internacional (IEC), que desenvolvem e publicam normas internacionais.'><span class='highlight'>ISO/IEC</span></span> Força-Tarefa de Tecnologia da Informação estabeleceu princípios de privacidade que, assim como o PbD, estão diretamente relacionados aos princípios e bases legais das legislações de privacidade. Isso significa que, além de reforçar os parâmetros da lei, o framework pode complementar <span title='Recomendações ou instruções que ajudam as organizações a cumprir as leis de privacidade.'><span class='highlight'>diretrizes</span></span> que são abundantes em uma peça legislativa, mas escassas em outra. Assim, o ISO/IEC 29100 &#8212; atualizado em 2020 para padrões brasileiros &#8212; aborda princípios baseados na definição de Informações Pessoalmente Identificáveis (PII) ou apenas Dados Pessoais (DP), que se referem a informações pessoais capazes de identificar um indivíduo. Portanto, o escopo coberto pelo framework é tão abrangente quanto as legislações, aplicando-se a pessoas naturais ou a qualquer organização envolvida no processamento de dados pessoais, variando da <span title='Etapas no ciclo de vida da gestão de dados.'><span class='highlight'>especificação ao desenvolvimento e manutenção subsequente</span></span>."
+        ];
+
+        let currentIndex = 0;
+
+        updateCarousel();
+
+        function updateCarousel() {
+            const carouselTextElement = document.getElementById('carousel-text');
+            
+            if (carouselTextElement.classList.contains('hidden')) {
+                carouselTextElement.classList.remove('hidden');
+            } else {
+                carouselTextElement.classList.add('hidden');
+
+                setTimeout(() => {
+                    carouselTextElement.innerHTML = texts[currentIndex];
+                    carouselTextElement.classList.remove('hidden');
+                }, 200);
+            }
+        }
+
+        function nextText() {
+            currentIndex = (currentIndex + 1) % texts.length;
+            updateCarousel();
+        }
+
+        function prevText() {
+            currentIndex = (currentIndex - 1 + texts.length) % texts.length;
+            updateCarousel();
+        }
+
+        document.getElementById('next').addEventListener('click', nextText);
+        document.getElementById('prev').addEventListener('click', prevText);
+
+        //setInterval(nextText, 3000); 
+        updateCarousel();
+    </script>
+</body>
+</html>
